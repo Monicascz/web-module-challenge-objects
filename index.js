@@ -26,7 +26,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem("Nachos", 12, "Lunch"));
+console.log(createMenuItem("Steak", 45, "Dinner"));
+console.log(createMenuItem("Pasta", 15, "Dinner"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -46,8 +48,15 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
-}
+  discount: function(string){
+    if(string === "teacher" || string === "student"){
+      return this.price - (this.price*.25)
+    } else if (string === "public"){
+      return this.price - (this.price*.10)
+    }
+  },
+} 
+console.log(burger.discount("student"));
 
 
 
@@ -68,6 +77,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
+console.log(reviews[5].feedback);
 
 
 
@@ -77,7 +87,8 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
-
+const newReview = {name: "Karen", rating: 0, feedback: "They wouldn't let me in without my mask and the manager asked me to leave which is illegal since I have a medical exemption. Don't support this business."}
+console.log(reviews.push(newReview));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
